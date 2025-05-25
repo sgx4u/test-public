@@ -1,18 +1,18 @@
+// Simple Sorting Algorithm: Bubble Sort
+
 function bubbleSort(arr) {
-    const n = arr.length;
-    for (let i = 0; i < n - 1; i++) {
-        for (let j = 0; j < n - i - 1; j++) {
+    let len = arr.length;
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
             if (arr[j] > arr[j + 1]) {
-                // Swap
-                let temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                // Swap arr[j] and arr[j + 1]
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             }
         }
     }
     return arr;
 }
 
-// Example usage
-const array = [64, 34, 25, 12, 22, 11, 90];
-console.log("Sorted array:", bubbleSort(array));
+// Example usage:
+const unsortedArray = [5, 3, 8, 4, 2];
+console.log(bubbleSort(unsortedArray)); // Output: [2, 3, 4, 5, 8]
