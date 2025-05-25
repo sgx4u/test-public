@@ -26,3 +26,13 @@ function binarySearch(arr: number[], target: number): number {
     }
     return -1; // Target not found
 }
+
+// Linear Search Implementation in TypeScript
+function linearSearch(arr: number[], target: number): number {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i; // Target found
+        }
+    }
+    return -1; // Target not found
+}
